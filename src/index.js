@@ -1,10 +1,11 @@
-import "./styles.css";
+const myProfile = {
+  name: "makiko",
+  age: 27
+};
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+const message1 = `私の名前は${myProfile.name}です。`;
+console.log(message1);
+
+const { name, age } = myProfile;
+const message2 = `私の名前は${name}です。年齢は${age}だ`;
+console.log(message2);
