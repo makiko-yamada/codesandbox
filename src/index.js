@@ -1,15 +1,21 @@
-const nameArr = ["田中", "山田", "鈴木"];
+//三項演算子
+//【構文】ある条件 ? 条件がtruの時 : 条件がfalseの時
 
-//配列をループして何か処理する（従来のやり方）
-for (let index = 0; index < nameArr.length; index++) {
-  console.log(nameArr[index]);
-}
+//例1)
+const val1 = 1 > 0 ? "trueです" : "falseです";
+console.log(val1);
 
-//配列をループして何か処理する（map）
-nameArr.map((name) => console.log(name));
+//例2)
+const num = 1300;
 
-//リターンされた結果に基づいて新しい配列を作る
-const nameArr2 = nameArr.map((name) => {
-  return name;
-});
-console.log(nameArr2);
+const formattedNum =
+  typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+
+console.log(formattedNum);
+//toLocaleStringはカンマを入れてくれる
+
+//例3)
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えます" : "大丈夫です";
+};
+console.log(checkSum(30, 60));
